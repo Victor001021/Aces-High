@@ -1,0 +1,253 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Recursos/metal lord.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Recursos/Menu1.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Blenheim/Type_1/Blemheim_progress_3.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Personagem2.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/B17/Type-4/colored_4.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Media.png" type="Texture" id=6]
+[ext_resource path="res://script_selecao.gd" type="Script" id=7]
+[ext_resource path="res://Recursos/seta3.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/enter.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/setas2.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/setas.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/menusound.wav" type="AudioStream" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "personagem1"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personagens/personagem1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.00392157, 0.00392157, 0.00392157, 1 ), Color( 1, 1, 1, 1 ), Color( 0.00392157, 0.00392157, 0.00392157, 1 ), Color( 1, 1, 1, 1 ), Color( 0.00392157, 0.00392157, 0.00392157, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "personagem2"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personagens/personagem2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "personagem3"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personagens/personagem3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "personagem4"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personagens/personagem4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "voltar"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514.149, 301.114 )
+scale = Vector2( 0.536, 0.558 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 328.0
+margin_top = 8.0
+margin_right = 700.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 1 )
+text = "sp_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 448.0
+margin_top = 544.0
+margin_right = 576.0
+margin_bottom = 583.0
+custom_fonts/font = SubResource( 1 )
+text = "v_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 240.0
+margin_top = 176.0
+margin_right = 777.0
+margin_bottom = 384.0
+color = Color( 1, 1, 1, 0.266667 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personagens" type="Node2D" parent="."]
+
+[node name="personagem1" type="Sprite" parent="Personagens"]
+position = Vector2( 376, 272 )
+scale = Vector2( 0.859375, 0.859375 )
+texture = ExtResource( 3 )
+
+[node name="personagem2" type="Sprite" parent="Personagens"]
+position = Vector2( 640, 272 )
+scale = Vector2( 0.412462, 0.412462 )
+texture = ExtResource( 4 )
+
+[node name="personagem3" type="Sprite" parent="Personagens"]
+position = Vector2( 384, 288 )
+scale = Vector2( 0.860744, 0.860744 )
+texture = ExtResource( 5 )
+
+[node name="personagem4" type="Sprite" parent="Personagens"]
+position = Vector2( 640, 282.832 )
+scale = Vector2( 0.414309, 0.414309 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 15, 135, 432, 332 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/personagem1 = SubResource( 2 )
+anims/personagem2 = SubResource( 3 )
+anims/personagem3 = SubResource( 4 )
+anims/personagem4 = SubResource( 5 )
+anims/voltar = SubResource( 6 )
+
+[node name="seta3" type="Sprite" parent="."]
+position = Vector2( 224, 272 )
+scale = Vector2( 0.0662525, 0.0662525 )
+texture = ExtResource( 8 )
+
+[node name="seta4" type="Sprite" parent="."]
+position = Vector2( 792, 272 )
+scale = Vector2( 0.0662525, 0.0662525 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 220, 576 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 10 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 240.0
+margin_top = 568.0
+margin_right = 407.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 7 )
+text = "esc_personagem_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 35.016
+margin_top = 568.0
+margin_right = 202.016
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 7 )
+text = "navegar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 677.0
+margin_top = 568.0
+margin_right = 768.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 7 )
+text = "sele_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 665, 574.401 )
+scale = Vector2( 0.015, 0.016 )
+texture = ExtResource( 9 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 30, 574.401 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.0

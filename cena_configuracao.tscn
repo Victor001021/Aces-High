@@ -1,0 +1,277 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Recursos/metal lord.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Recursos/Menu1.png" type="Texture" id=2]
+[ext_resource path="res://script_configuracao.gd" type="Script" id=3]
+[ext_resource path="res://Recursos/setas.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/setas2.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/enter.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/menusound.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=5]
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Efeitos:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fullscreen2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Musica:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0313726, 0.0313726, 0.0313726, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0313726, 0.0313726, 0.0313726, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0313726, 0.0313726, 0.0313726, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Voltar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0196078, 0.0196078, 0.0196078, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0196078, 0.0196078, 0.0196078, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0196078, 0.0196078, 0.0196078, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=9]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 14
+outline_size = 1
+outline_color = Color( 0.0235294, 0.0235294, 0.0235294, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Menu1" type="Sprite" parent="."]
+position = Vector2( 514.149, 301.114 )
+scale = Vector2( 0.536, 0.558 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Musica" type="Label" parent="."]
+margin_left = 456.0
+margin_top = 240.0
+margin_right = 752.0
+margin_bottom = 279.0
+custom_fonts/font = SubResource( 1 )
+text = "musica_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Efeitos" type="Label" parent="."]
+margin_left = 464.0
+margin_top = 304.0
+margin_right = 732.0
+margin_bottom = 343.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "efeito_sonoro_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen2" type="Label" parent="."]
+margin_left = 456.0
+margin_top = 176.0
+margin_right = 752.0
+margin_bottom = 215.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Fullscreen"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Label" parent="."]
+margin_left = 456.0
+margin_top = 552.0
+margin_right = 570.0
+margin_bottom = 591.0
+rect_pivot_offset = Vector2( 48, 456 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "v_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status_musica" type="RichTextLabel" parent="."]
+margin_left = 776.0
+margin_top = 240.0
+margin_right = 1004.0
+margin_bottom = 288.0
+rect_pivot_offset = Vector2( 416, 24 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "<Desativado>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status_efeitos" type="RichTextLabel" parent="."]
+margin_left = 776.0
+margin_top = 304.0
+margin_right = 1004.0
+margin_bottom = 344.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "<Desativado>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status_fullscreen" type="RichTextLabel" parent="."]
+margin_left = 776.0
+margin_top = 176.0
+margin_right = 1004.0
+margin_bottom = 216.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "<Desativado>"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/efeitos = SubResource( 5 )
+anims/fullscreen = SubResource( 6 )
+anims/musica = SubResource( 7 )
+anims/voltar = SubResource( 8 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+margin_left = 619.379
+margin_top = 26.0
+margin_right = 953.379
+margin_bottom = 83.0
+custom_fonts/normal_font = SubResource( 9 )
+text = "Configurações"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setas" type="Sprite" parent="."]
+position = Vector2( 30, 574.401 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 35.016
+margin_top = 568.0
+margin_right = 219.016
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 10 )
+text = "navegar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 248.0
+margin_top = 568.0
+margin_right = 402.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 10 )
+text = "ativar_desativar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+margin_left = 256.0
+margin_top = 568.0
+margin_right = 350.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 10 )
+text = "sele
+_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setas2" type="Sprite" parent="."]
+position = Vector2( 248, 576 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 248, 574.401 )
+scale = Vector2( 0.015, 0.016 )
+texture = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.0

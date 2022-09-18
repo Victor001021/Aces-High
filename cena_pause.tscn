@@ -1,0 +1,429 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Recursos/metal lord.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://script_pause.gd" type="Script" id=2]
+[ext_resource path="res://Recursos/menusound.wav" type="AudioStream" id=3]
+[ext_resource path="res://Recursos/setas.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/enter.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/setas2.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "configuracoes"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "continuar"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "reiniciar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label7:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 1.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=6]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=8]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Efeitos_sonoros:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Fullscreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Musica:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Voltar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=12]
+size = 14
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Pause" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1032.0
+margin_bottom = 608.0
+color = Color( 0, 0, 0, 0.498039 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 400.0
+margin_top = 144.0
+margin_right = 644.0
+margin_bottom = 183.0
+custom_fonts/font = SubResource( 1 )
+text = "pausado_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect"]
+margin_left = 400.0
+margin_top = 248.0
+margin_right = 638.0
+margin_bottom = 287.0
+custom_fonts/font = SubResource( 1 )
+text = "continuar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="ColorRect"]
+margin_left = 400.0
+margin_top = 312.0
+margin_right = 638.0
+margin_bottom = 351.0
+custom_fonts/font = SubResource( 1 )
+text = "reiniciar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColorRect"]
+margin_left = 400.0
+margin_top = 376.0
+margin_right = 644.0
+margin_bottom = 415.0
+custom_fonts/font = SubResource( 1 )
+text = "config_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="ColorRect"]
+margin_left = 400.0
+margin_top = 440.0
+margin_right = 644.0
+margin_bottom = 479.0
+custom_fonts/font = SubResource( 1 )
+text = "sair_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+anims/configuracoes = SubResource( 2 )
+anims/continuar = SubResource( 3 )
+anims/reiniciar = SubResource( 4 )
+anims/sair = SubResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="ColorRect"]
+position = Vector2( 216.967, 574.401 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 4 )
+
+[node name="Label5" type="Label" parent="ColorRect"]
+margin_left = 232.0
+margin_top = 568.0
+margin_right = 434.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 6 )
+text = "navegar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="ColorRect"]
+margin_left = 480.0
+margin_top = 568.0
+margin_right = 563.0
+margin_bottom = 588.0
+custom_fonts/font = SubResource( 6 )
+text = "sele_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="ColorRect"]
+position = Vector2( 465.268, 574.401 )
+scale = Vector2( 0.015, 0.016 )
+texture = ExtResource( 5 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+margin_right = 1032.0
+margin_bottom = 608.0
+color = Color( 0, 0, 0, 0.498039 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="Label" parent="ColorRect2"]
+margin_left = 120.0
+margin_top = 176.0
+margin_right = 400.0
+margin_bottom = 215.0
+custom_fonts/font = SubResource( 7 )
+text = "Fullscreen"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen_status" type="Label" parent="ColorRect2"]
+margin_left = 624.0
+margin_top = 176.0
+margin_right = 892.0
+margin_bottom = 215.0
+custom_fonts/font = SubResource( 7 )
+text = "<Desativado>"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Efeitos_sonoros" type="Label" parent="ColorRect2"]
+margin_left = 120.0
+margin_top = 240.0
+margin_right = 408.0
+margin_bottom = 279.0
+custom_fonts/font = SubResource( 7 )
+text = "efeito_sonoro_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Efeitos_status" type="Label" parent="ColorRect2"]
+margin_left = 624.0
+margin_top = 240.0
+margin_right = 892.0
+margin_bottom = 279.0
+custom_fonts/font = SubResource( 7 )
+text = "<Desativado>"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Musica" type="Label" parent="ColorRect2"]
+margin_left = 120.0
+margin_top = 304.0
+margin_right = 400.0
+margin_bottom = 343.0
+custom_fonts/font = SubResource( 7 )
+text = "musica_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voltar" type="Label" parent="ColorRect2"]
+margin_left = 434.0
+margin_top = 536.0
+margin_right = 598.0
+margin_bottom = 575.0
+custom_fonts/font = SubResource( 7 )
+text = "v_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Musica_status" type="Label" parent="ColorRect2"]
+margin_left = 624.0
+margin_top = 304.0
+margin_right = 892.0
+margin_bottom = 343.0
+custom_fonts/font = SubResource( 7 )
+text = "<Desativado>"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2"]
+anims/efeitos = SubResource( 8 )
+anims/fullscreen = SubResource( 9 )
+anims/musica = SubResource( 10 )
+anims/voltar = SubResource( 11 )
+
+[node name="Sprite3" type="Sprite" parent="ColorRect2"]
+position = Vector2( 30, 574.401 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="ColorRect2"]
+position = Vector2( 230, 576 )
+scale = Vector2( 0.066, 0.066 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_left = 40.0
+margin_top = 568.0
+margin_right = 194.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 12 )
+text = "navegar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2"]
+margin_left = 240.0
+margin_top = 568.0
+margin_right = 388.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 12 )
+text = "ativar_desativar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColorRect2"]
+visible = false
+margin_left = 242.0
+margin_top = 568.0
+margin_right = 336.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 12 )
+text = "selecionar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite5" type="Sprite" parent="ColorRect2"]
+visible = false
+position = Vector2( 230, 574.401 )
+scale = Vector2( 0.015, 0.016 )
+texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0

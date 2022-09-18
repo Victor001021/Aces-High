@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Recursos/metal lord.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Recursos/Menu1.png" type="Texture" id=2]
+[ext_resource path="res://script_como_jogar.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "voltar"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514.149, 301.114 )
+scale = Vector2( 0.536, 0.558 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 712.0
+margin_top = 32.0
+margin_right = 908.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 1 )
+text = "como_jogar_tr"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 568.0
+margin_top = 160.0
+margin_right = 1019.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 2 )
+text = "Use as setas para controlar a nave,
+ espaço para atirar,
+ 'M' para o especial,
+e ESC para pausar."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 288.0
+margin_top = 560.0
+margin_right = 738.0
+margin_bottom = 590.0
+custom_fonts/font = SubResource( 2 )
+text = "Pressione enter para voltar ao menu"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/voltar = SubResource( 3 )

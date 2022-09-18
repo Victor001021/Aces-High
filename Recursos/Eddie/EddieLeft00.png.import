@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/EddieLeft00.png-85b19b4d48d7e458b4af1a3aa42057b9.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Recursos/Eddie/EddieLeft00.png"
+dest_files=[ "res://.import/EddieLeft00.png-85b19b4d48d7e458b4af1a3aa42057b9.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

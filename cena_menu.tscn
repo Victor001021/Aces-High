@@ -1,0 +1,205 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Recursos/Menu1.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Menu2.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/metal lord.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://script_menu.gd" type="Script" id=4]
+[ext_resource path="res://Recursos/setas.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/enter.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/menusound.wav" type="AudioStream" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "como_jogar"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "configuracoes"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0156863, 0.0156863, 0.0156863, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "iniciar"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "sair"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 2.0
+loop = true
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+outline_size = 1
+outline_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Menu1" type="Sprite" parent="."]
+position = Vector2( 514.149, 301.114 )
+scale = Vector2( 0.535572, 0.557618 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Menu2" type="Sprite" parent="."]
+position = Vector2( 514.149, 305.278 )
+scale = Vector2( 0.535572, 0.552451 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "texto"
+anims/como_jogar = SubResource( 1 )
+anims/configuracoes = SubResource( 2 )
+anims/iniciar = SubResource( 3 )
+anims/sair = SubResource( 4 )
+anims/texto = SubResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 419.0
+margin_top = 296.0
+margin_right = 663.0
+margin_bottom = 335.0
+custom_fonts/font = SubResource( 6 )
+text = "iniciar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 419.0
+margin_top = 335.0
+margin_right = 663.0
+margin_bottom = 375.0
+custom_fonts/font = SubResource( 6 )
+text = "como_jogar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 418.98
+margin_top = 375.427
+margin_right = 662.98
+margin_bottom = 414.427
+custom_fonts/font = SubResource( 6 )
+text = "config_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 419.0
+margin_top = 414.0
+margin_right = 663.0
+margin_bottom = 453.0
+custom_fonts/font = SubResource( 6 )
+text = "sair_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setas" type="Sprite" parent="."]
+position = Vector2( 216.967, 574.401 )
+scale = Vector2( 0.0660898, 0.0660898 )
+texture = ExtResource( 5 )
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 227.391
+margin_top = 565.584
+margin_right = 429.391
+margin_bottom = 585.584
+custom_fonts/font = SubResource( 7 )
+text = "navegar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 464.0
+margin_top = 565.584
+margin_right = 572.0
+margin_bottom = 585.584
+custom_fonts/font = SubResource( 7 )
+text = "selecionar_tr"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 465.268, 574.401 )
+scale = Vector2( 0.0145214, 0.015635 )
+texture = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.0
+
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_started"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Recursos/stock-vector-miscellaneous-shoot-game-sprites-suitable-for-side-scrolling-action-and-adventure-game-497396470.png" type="Texture" id=1]
+[ext_resource path="res://script_disparo_inimigo.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "explosao_tiro_inimigo"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 675, 80, 33, 33 ), Rect2( 1094, 750, 32, 32 ), Rect2( 1224, 779, 36, 33 ), Rect2( 1096, 795, 58, 45 ), Rect2( 1017, 849, 66, 52 ), Rect2( 1092, 875, 44, 45 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "sumir"
+} ]
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 96, 56 )
+
+[node name="DisparoInimigo" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="DisparoInimigo"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 675, 80, 33, 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DisparoInimigo"]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DisparoInimigo"]
+anims/explosao_tiro_inimigo = SubResource( 2 )
+[connection signal="area_entered" from="DisparoInimigo" to="DisparoInimigo" method="_on_DisparoInimigo_area_entered"]
+[connection signal="body_entered" from="DisparoInimigo" to="DisparoInimigo" method="_on_DisparoInimigo_body_entered"]

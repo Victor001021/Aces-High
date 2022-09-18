@@ -1,0 +1,221 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://script_personagem.gd" type="Script" id=1]
+[ext_resource path="res://Recursos/B17/Type-4/Animated/1.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Personagem4/Parado.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Blenheim/Type_1/Animation/3.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Personagem2/Right.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Blenheim/Type_1/Animation/1.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Blenheim/Type_1/Animation/2.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/B17/Type-4/Animated/2.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/B17/Type-4/Animated/3.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Personagem1/Left02.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Personagem1/Right01.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Personagem1/Right02.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Personagem1/Right00.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Personagem1/Left00.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Personagem1/Left01.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Personagem2/Left.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Personagem2/Parado.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Personagem3/Right02.png" type="Texture" id=18]
+[ext_resource path="res://Recursos/Personagem3/Left01.png" type="Texture" id=19]
+[ext_resource path="res://Recursos/Personagem3/Right01.png" type="Texture" id=20]
+[ext_resource path="res://Recursos/Personagem3/Right00.png" type="Texture" id=21]
+[ext_resource path="res://Recursos/Personagem3/Left00.png" type="Texture" id=22]
+[ext_resource path="res://Recursos/Personagem3/Left02.png" type="Texture" id=23]
+[ext_resource path="res://Recursos/Personagem4/Left.png" type="Texture" id=24]
+[ext_resource path="res://Recursos/Personagem4/Right.png" type="Texture" id=25]
+[ext_resource path="res://Recursos/tiro.wav" type="AudioStream" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "nave3voando",
+"speed": 65.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "nave3esquerda",
+"speed": 70.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "nave3direita",
+"speed": 70.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "nave4direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "nave4voando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "nave4esquerda",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "nave2direita",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "nave2esquerda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "nave2voando",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "nave1Voando",
+"speed": 70.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "nave1esquerda",
+"speed": 70.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "nave1direita",
+"speed": 70.0
+} ]
+
+[sub_resource type="Animation" id=5]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("nave2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("nave3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("nave4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("nave1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ), Color( 0.984314, 0.0470588, 0.0470588, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 320, 368 )
+
+[node name="Personagem" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.719997, 0.719997 )
+script = ExtResource( 1 )
+
+[node name="nave3" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 9.53674e-06, -1.14441e-05 )
+scale = Vector2( 1.16133, 1.16133 )
+frames = SubResource( 1 )
+animation = "nave3voando"
+frame = 1
+playing = true
+
+[node name="nave3Collision" type="CollisionPolygon2D" parent="Personagem"]
+visible = false
+scale = Vector2( 1.22222, 1.22222 )
+polygon = PoolVector2Array( 7.31424, -7.74521, 56.4775, -10.0863, 98.5152, -13.6989, 106.059, -20.4621, 104.498, -25.6645, 62.098, -31.1271, 46.7507, -32.6879, 43.8893, -40.4915, 36.3458, -41.2719, 35.0452, -33.4682, 22.5593, -35.8094, 21.7789, -44.3934, 14.7556, -45.1738, 12.9347, -39.9713, 12.9347, -37.3701, 6.43164, -37.6302, 4.09055, -56.6192, -2.93277, -59.4806, -8.39539, -56.6192, -9.17575, -46.9947, -10.4763, -36.8498, -16.4592, -36.8498, -16.4592, -43.3529, -21.6617, -46.2142, -27.6445, -43.8732, -27.6445, -35.8094, -39.0899, -34.2486, -40.3905, -39.4511, -44.0323, -42.0523, -48.7145, -41.532, -50.0151, -34.2486, -67.8008, -31.3282, -90.0162, -28.2102, -109.503, -24.3128, -107.555, -14.9589, -88.847, -11.841, -52.9904, -9.50253, -12.0674, -7.94348, -9.72885, 2.96933, -7.78012, 20.8976, -15.9648, 25.9642, -42.8571, 32.2002, -42.8571, 37.2668, -15.575, 39.995, -7.39038, 39.6053, -5.83139, 49.7386, -0.375031, 50.1284, 1.96347, 39.995, 24.5686, 40.3847, 39.7687, 38.0463, 40.5481, 32.5899, 4.69168, 24.0155 )
+
+[node name="nave4" type="AnimatedSprite" parent="Personagem"]
+scale = Vector2( 0.492019, 0.492019 )
+frames = SubResource( 2 )
+animation = "nave4voando"
+
+[node name="nave4Collision" type="CollisionPolygon2D" parent="Personagem"]
+visible = false
+polygon = PoolVector2Array( -14.8239, -3.49673, -59.7039, -11.9577, -99.8017, -20.0508, -106.423, -31.4548, -102.745, -38.0765, -97.5945, -40.6516, -47.5642, -45.066, -10.4094, -46.5375, -10.4094, -51.6877, -10.4094, -61.2523, -7.83429, -65.6667, -3.052, -78.1743, -0.476929, -81.4851, 2.83389, -75.5992, 6.14474, -67.8739, 10.5592, -59.7808, 10.5592, -53.1591, 10.5592, -47.6411, 97.7443, -39.548, 102.527, -38.8122, 106.205, -30.7191, 101.791, -22.9938, 81.9259, -14.9007, 14.9736, -3.49673, 7.9841, 2.02133, 6.88046, 18.5755, 3.93753, 53.891, 25.6418, 60.1447, 25.2739, 59.7768, 27.849, 65.6628, 27.4361, 71.4437, 9.68057, 74.3341, 4.72552, 74.747, 1.42218, 69.792, 0.596344, 82.1796, -1.46826, 68.5533, -5.18451, 74.3341, -22.5272, 73.9212, -29.1339, 67.3145, -28.308, 59.0561, -6.42328, 53.6881, -8.48788, 17.7641, -9.31372, 0.834381 )
+
+[node name="nave2" type="AnimatedSprite" parent="Personagem"]
+visible = false
+scale = Vector2( 0.482, 0.482 )
+frames = SubResource( 3 )
+animation = "nave2voando"
+
+[node name="nave2Collision" type="CollisionPolygon2D" parent="Personagem"]
+visible = false
+scale = Vector2( 0.482, 0.482 )
+polygon = PoolVector2Array( 7.5, -163.2, 7.5, -160, 15.5, -144, 15.5, -139.8, 18.5, -129.8, 18.5, -76.5, 21.6, -71.5, 40.5, -71.5, 43.5, -75.2, 43.5, -106.8, 45.1, -111.5, 46.7, -111.5, 52.7, -117.5, 72.5, -117.5, 72.5, -115.6, 79.5, -111.7, 79.5, -109.1, 81.5, -106.1, 81.5, -72.3, 85.3, -68.5, 137.5, -68.5, 229.5, -66.5, 229.5, -64.6, 237.5, -59.6, 237.5, -52.5, 238.7, -40.5, 237, -40.5, 235.1, -32.5, 233.2, -32.5, 224.3, -24.5, 216.8, -24.5, 82.5, -6.7, 76.5, -1.60001, 76.5, 1.8, 71, 21.5, 69.6, 21.5, 65.7, 28.5, 61.2, 28.5, 49.2, 0.5, 34.5, 0.5, 34.5, 1.10001, 19.5, 4.2, 19.5, 5.2, 16.5, 9.2, 16.5, 84.6, 12.7, 114.8, 24.9, 119.5, 34.6, 119.5, 66.5, 123.7, 66.5, 125.4, 75.5, 131.4, 75.5, 146.5, 73.4, 146.5, 67.4, 153.5, 62.9, 153.5, 14.4, 163.5, -17.8, 163.5, -70.5, 153.1, -70.5, 151.2, -79.5, 141.3, -79.5, 135.9, -72.6, 125.5, -69.8, 125.5, -23.5, 118.7, -23.5, 117.8, -17.5, 116.8, -14.5, 112.8, -14.5, 108.9, -18.5, 87.7, -18.5, 64.5, -21.4, 5.5, -35.9, 0.5, -51.7, 0.5, -60.1, 24.5, -61.8, 24.5, -67.2, 28.8, -69.5, 27.8, -69.5, 26.1, -75.5, 17.1, -75.5, 13.5, -79, -0.5, -84.4, -6.5, -87.6, -6.5, -228.5, -24.7, -228.5, -26.6, -239.5, -35.6, -239.5, -40.5, -240.5, -56.9, -240.5, -58.5, -238.4, -58.5, -231.4, -66.5, -161.5, -66.5, -88.5, -68.4, -83.5, -72.5, -83.5, -109.5, -81.4, -109.5, -74.4, -117.5, -55.6, -117.5, -46.5, -107.3, -46.5, -75, -46.3, -74.5, -45.7, -74.5, -42.7, -71.5, -25.3, -71.5, -21.5, -75.3, -21.5, -128.7, -20.2, -136.5, -19.1, -136.5, -15.1, -153.5, -13.8, -153.5, -8.5, -163.2, 5.7, -163.5 )
+
+[node name="nave1" type="AnimatedSprite" parent="Personagem"]
+visible = false
+position = Vector2( 1.36606, -1.84561 )
+scale = Vector2( 0.819609, 0.970669 )
+frames = SubResource( 4 )
+animation = "nave1Voando"
+frame = 1
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="nave1Collision" type="CollisionPolygon2D" parent="Personagem"]
+visible = false
+polygon = PoolVector2Array( 15.7978, -2.94873, 65.8846, -8.35028, 101.731, -16.207, 106.15, -24.0638, 101.731, -29.4653, 75.7056, -33.3937, 40.8412, -35.3578, 39.368, -48.1251, 32.0023, -51.5624, 25.6187, -46.6519, 25.1277, -36.831, 15.3067, -36.831, 12.8515, -50.5803, 8.43207, -54.5087, -1.38889, -53.5266, -1.38889, -36.831, -12.1919, -36.831, -12.683, -45.6698, -18.0845, -51.0714, -24.9591, -49.1072, -28.3965, -37.8131, -25.9413, -34.3757, -85.8489, -30.4474, -91.2505, -25.0459, -89.2863, -17.1891, -60.3145, -9.82336, -10.2277, -3.93085, -1.87991, -2.4577, 4.01266, 36.8261, -19.5576, 40.7544, -19.5576, 48.6112, -4.82617, 57.9411, 2.53949, 54.9948, 5.48581, 51.0664, 4.99472, 60.8874, 8.9231, 51.5575, 13.3426, 55.9769, 32.9844, 51.5575, 35.4397, 44.6828, 29.5471, 40.7544, 8.9231, 36.3351, 12.8515, 5.89011 )
+
+[node name="Position2D" type="Position2D" parent="Personagem"]
+position = Vector2( -59.3226, -48.0091 )
+
+[node name="Position2D2" type="Position2D" parent="Personagem"]
+position = Vector2( 72.0472, -48.0091 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Personagem"]
+anims/dano = SubResource( 5 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Personagem"]
+stream = ExtResource( 27 )
+volume_db = -5.0

@@ -1,0 +1,101 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://Recursos/Inimigo/Inimigo04.png" type="Texture" id=1]
+[ext_resource path="res://script_inimigo.gd" type="Script" id=2]
+[ext_resource path="res://Recursos/Inimigo/Inimigo01.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Inimigo/Inimigo02.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Inimigo/Inimigo03.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Explosao/Explosao05.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Explosao/Explosao08.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Explosao/Explosao09.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Explosao/Explosao17.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Explosao/Explosao22.png" type="Texture" id=10]
+[ext_resource path="res://Recursos/Explosao/Explosao32.png" type="Texture" id=11]
+[ext_resource path="res://Recursos/Explosao/Explosao01.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Explosao/Explosao06.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Explosao/Explosao29.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Explosao/Explosao25.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Explosao/Explosao31.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Explosao/Explosao34.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Explosao/Explosao28.png" type="Texture" id=18]
+[ext_resource path="res://Recursos/Explosao/Explosao21.png" type="Texture" id=19]
+[ext_resource path="res://Recursos/Explosao/Explosao16.png" type="Texture" id=20]
+[ext_resource path="res://Recursos/Explosao/Explosao11.png" type="Texture" id=21]
+[ext_resource path="res://Recursos/Explosao/Explosao36.png" type="Texture" id=22]
+[ext_resource path="res://Recursos/Explosao/Explosao39.png" type="Texture" id=23]
+[ext_resource path="res://Recursos/Explosao/Explosao42.png" type="Texture" id=24]
+[ext_resource path="res://Recursos/Explosao/Explosao15.png" type="Texture" id=25]
+[ext_resource path="res://Recursos/Explosao/Explosao43.png" type="Texture" id=26]
+[ext_resource path="res://Recursos/Explosao/Explosao35.png" type="Texture" id=27]
+[ext_resource path="res://Recursos/Explosao/Explosao00.png" type="Texture" id=28]
+[ext_resource path="res://Recursos/Explosao/Explosao03.png" type="Texture" id=29]
+[ext_resource path="res://Recursos/Explosao/Explosao13.png" type="Texture" id=30]
+[ext_resource path="res://Recursos/Explosao/Explosao20.png" type="Texture" id=31]
+[ext_resource path="res://Recursos/Explosao/Explosao12.png" type="Texture" id=32]
+[ext_resource path="res://Recursos/Explosao/Explosao23.png" type="Texture" id=33]
+[ext_resource path="res://Recursos/Explosao/Explosao37.png" type="Texture" id=34]
+[ext_resource path="res://Recursos/Explosao/Explosao40.png" type="Texture" id=35]
+[ext_resource path="res://Recursos/Explosao/Explosao44.png" type="Texture" id=36]
+[ext_resource path="res://Recursos/Explosao/Explosao45.png" type="Texture" id=37]
+[ext_resource path="res://Recursos/Explosao/Explosao46.png" type="Texture" id=38]
+[ext_resource path="res://Recursos/Explosao/Explosao47.png" type="Texture" id=39]
+[ext_resource path="res://Recursos/Explosao/Explosao27.png" type="Texture" id=40]
+[ext_resource path="res://Recursos/Explosao/Explosao41.png" type="Texture" id=41]
+[ext_resource path="res://Recursos/Explosao/Explosao18.png" type="Texture" id=42]
+[ext_resource path="res://Recursos/Explosao/Explosao07.png" type="Texture" id=43]
+[ext_resource path="res://Recursos/Explosao/Explosao14.png" type="Texture" id=44]
+[ext_resource path="res://Recursos/Explosao/Explosao04.png" type="Texture" id=45]
+[ext_resource path="res://Recursos/Explosao/Explosao02.png" type="Texture" id=46]
+[ext_resource path="res://Recursos/Explosao/Explosao10.png" type="Texture" id=47]
+[ext_resource path="res://Recursos/Explosao/Explosao19.png" type="Texture" id=48]
+[ext_resource path="res://Recursos/Explosao/Explosao24.png" type="Texture" id=49]
+[ext_resource path="res://Recursos/Explosao/Explosao26.png" type="Texture" id=50]
+[ext_resource path="res://Recursos/Explosao/Explosao33.png" type="Texture" id=51]
+[ext_resource path="res://Recursos/Explosao/Explosao30.png" type="Texture" id=52]
+[ext_resource path="res://Recursos/Explosao/Explosao38.png" type="Texture" id=53]
+[ext_resource path="res://Recursos/DeathFlash (mp3cut.net).wav" type="AudioStream" id=54]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "voando",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 12 ), ExtResource( 46 ), ExtResource( 29 ), ExtResource( 45 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 43 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 47 ), ExtResource( 21 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 44 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 42 ), ExtResource( 48 ), ExtResource( 31 ), ExtResource( 19 ), ExtResource( 10 ), ExtResource( 33 ), ExtResource( 49 ), ExtResource( 15 ), ExtResource( 50 ), ExtResource( 40 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 52 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 51 ), ExtResource( 17 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 34 ), ExtResource( 53 ), ExtResource( 23 ), ExtResource( 35 ), ExtResource( 41 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": false,
+"name": "explosao",
+"speed": 40.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 397.051, 155.824 )
+scale = Vector2( 0.88, 0.88 )
+script = ExtResource( 2 )
+
+[node name="Inimigo" type="Area2D" parent="."]
+position = Vector2( -0.0886841, 0.125244 )
+scale = Vector2( 0.836878, 0.836878 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Inimigo"]
+position = Vector2( -3.05176e-05, 0 )
+scale = Vector2( 0.381507, 0.381507 )
+frames = SubResource( 1 )
+animation = "voando"
+frame = 2
+playing = true
+flip_v = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inimigo"]
+build_mode = 1
+polygon = PoolVector2Array( 0, 64.6674, -3.95621, 57.865, -3.95621, 48.3489, -4.17249, 39.2653, -6.98404, 34.7235, -8.28171, 28.0189, -9.3631, 21.0981, -17.149, 19.3679, -29.0442, 20.0167, -37.2627, 20.0167, -58.4577, 20.0167, -80.3015, 20.8818, -84.8433, 18.5028, -84.8433, 13.7447, -84.8433, 8.98666, -80.3015, 5.30997, -53.0507, 0.335625, -12.6071, -6.58521, -8.93048, -9.39685, -9.57932, -16.9665, -9.14673, -26.6989, -8.49792, -33.1872, -25.3674, -39.0266, -26.4488, -44.6499, -21.907, -45.9475, -4.60495, -44.001, -8.7142, -61.3031, -2.87473, -65.6286, 1.2345, -66.9263, 5.12747, -62.3845, 6.64142, -48.9754, 5.56003, -44.6499, 25.2411, -44.6499, 26.1062, -39.6755, 6.8577, -33.8361, 9.02042, -8.74808, 21.1317, -5.28765, 51.6266, -0.313278, 76.282, 3.57968, 76.4983, 0.984383, 81.2564, 2.49831, 84.2842, 8.77031, 84.7168, 16.34, 83.4191, 18.719, 73.0379, 20.6655, 64.6031, 20.2329, 47.5173, 20.2329, 27.4037, 19.8004, 8.37134, 20.0167, 5.34351, 21.9631, 5.99234, 37.3188, 4.47842, 47.9163, 3.82965, 57.865 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Inimigo"]
+stream = ExtResource( 54 )
+
+[connection signal="area_entered" from="Inimigo" to="." method="_on_Inimigo_area_entered"]
+[connection signal="body_entered" from="Inimigo" to="." method="_on_Inimigo_body_entered"]
+[connection signal="animation_finished" from="Inimigo/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

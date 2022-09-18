@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DeathFlash (mp3cut.net).wav-5a55248a7632d4cf4a8a624a33e93155.sample"
+
+[deps]
+
+source_file="res://Recursos/DeathFlash (mp3cut.net).wav"
+dest_files=[ "res://.import/DeathFlash (mp3cut.net).wav-5a55248a7632d4cf4a8a624a33e93155.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
